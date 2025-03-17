@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Learn Python</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="utf-8">
+    <meta man="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <nav id="navbar">
+      <div class="navbar">
+        <header>Learn Python</header>
+        <div class="line"></div>
+        <a class="nav-link" href="#What_is_Python?">What is Python?</a>
+        <div class="line"></div>
+        <a class="nav-link" href="#Hello_World">Hello World</a>
+        <div class="line"></div>
+        <a class="nav-link" href="#Variables">Variables</a>
+        <div class="line"></div>
+        <a class="nav-link" href="#If_Statements">If Statements</a>
+        <div class="line"></div>
+        <a class="nav-link" href="#For_Loops">For Loops</a>
+        <div class="line"></div>
+        <a class="nav-link" href="#Reference">Reference</a>
+        <div class="line"></div>
+      </div>
+    </nav>
+    <main id="main-doc">
+      <section class="main-section" id="What_is_Python?">
+        <header>What is Python?</header>
+        <p>Python is an easy to learn, powerful programming language. It has efficient high-level data structures and a simple but effective approach to object-oriented programming. Python’s elegant syntax and dynamic typing, together with its interpreted nature, make it an ideal language for scripting and rapid application development in many areas on most platforms.</p>
+        <p>Often, programmers fall in love with Python because of the increased productivity it provides. Since there is no compilation step, the edit-test-debug cycle is incredibly fast. Debugging Python programs is easy: a bug or bad input will never cause a segmentation fault. Instead, when the interpreter discovers an error, it raises an exception. When the program doesn't catch the exception, the interpreter prints a stack trace. A source level debugger allows inspection of local and global variables, evaluation of arbitrary expressions, setting breakpoints, stepping through the code a line at a time, and so on. The debugger is written in Python itself, testifying to Python's introspective power. On the other hand, often the quickest way to debug a program is to add a few print statements to the source: the fast edit-test-debug cycle makes this simple approach very effective. </p>
+      </section>
+      <section class="main-section" id="Hello_World">
+        <header>Hello World</header>
+        <p>When we are just starting out with Python, one of the first programs we’ll learn is the classic “Hello, World!” program. It’s a simple program that displays the message “Hello, World!” on the screen. </p>
+        <p>The <i>print()</i> function prints the specified message to the screen, or other standard output device.
+The message can be a string, or any other object, the object will be converted into a string before written to the screen.</p>
+        <code>print("Hello, World!")</code>
+        <p>Go ahead and run that code on your own and watch as it outputs "Hello, World!".
+      </section>
+      <section class="main-section" id="Variables">
+        <header>Variables</header>
+        <p>A variable is a fundamental concept in any programming language. It is a reserved memory location that stores and manipulates data. In Python, variables are symbolic names that refer to objects or values stored in your computer’s memory. They allow you to assign descriptive names to data, making it easier to manipulate and reuse values throughout your code. You create a Python variable by assigning a value using the syntax <i>variable_name = value</i>.</p>
+        <p>Variables are entities of a program that holds a value. Here is an example of a variable:</p>
+        <code>x = 5</code>
+        <p>The data type for a variable is the type of data it holds. In the above example, x is holding 5, which is a number, and the data type of x is a number. In Python, there are three types of numbers: <b>Integer, Float, and Complex</b>.
+      </section>
+      <section class="main-section" id="If_Statements">
+        <header>If Statements</header>
+        <p>Python supports the usual logical conditions from mathematics:</p>
+        <ul>
+          <li>Equals: <i>a == b</i></li>
+          <li>Not Equals: <i>a != b</i></li>
+          <li>Less than: <i>a < b</i></li>
+          <li>Less than or equal to: <i>a <= b</i></li>
+          <li>Greater than: <i>a > b</i></li>
+          <li>Greater than or equal to: <i>a >= b</i></li>
+        </ul>
+        <p>These conditions can be used in several ways, most commonly in "if statements" and loops.</p>
+        <p><b>If:</b></p>
+        <code>a = 33<br>
+b = 200<br><br>
+if b > a:<br>
+<span class="tab">print("b is greater than a")</span></code>
+        <p>In this example we use two variables, a and b, which are used as part of the if statement to test whether b is greater than a. As a is 33, and b is 200, we know that 200 is greater than 33, and so we print to screen that "b is greater than a".</p>
+        <p><b>Elif:</b></p>
+        <p>The elif keyword is Python's way of saying "if the previous conditions were not true, then try this condition".</p>
+        <code>a = 33<br>
+b = 33<br><br>
+if b > a:<br>
+  <span class="tab">print("b is greater than a")</span><br>
+elif a == b:<br>
+  <span class="tab">print("a and b are equal")</span></code>
+        <p>In this example a is equal to b, so the first condition is not true, but the elif condition is true, so we print to screen that "a and b are equal".</p>
+        <p><b>Else:</b></p>
+        <p>The else keyword catches anything which isn't caught by the preceding conditions.</p>
+        <code>a = 200<br>
+b = 33<br><br>
+if b > a:<br>
+  <span class="tab">print("b is greater than a")</span><br>
+elif a == b:<br>
+  <span class="tab">print("a and b are equal")</span><br>
+else:<br>
+  <span class="tab">print("a is greater than b")</span></code>
+        <p>In this example a is greater than b, so the first condition is not true, also the elif condition is not true, so we go to the else condition and print to screen that "a is greater than b".</p>
+      </section>
+      <section class="main-section" id="For_Loops">
+        <header>For Loops</header>
+        <p>A for loop is used for iterating over a sequence (that is either a list, a tuple, a dictionary, a set, or a string).</p>
+        <p>This is less like the for keyword in other programming languages, and works more like an iterator method as found in other object-orientated programming languages.</p>
+        <p>With the for loop we can execute a set of statements, once for each item in a list, tuple, set etc.</p>
+        <p>Print each fruit in a fruit list:</p>
+        <code>
+          fruits = ["apple", "banana", "cherry"]<br><br>
+for x in fruits:<br>
+  <span class="tab">print(x)</span>
+        </code>
+        <p>The for loop does not require an indexing variable to set beforehand. <br>Even strings are iterable objects, they contain a sequence of characters:</p>
+        <p>Loop through the letters in the word "banana":</p>
+        <code>for x in "banana":<br>
+  <span class="tab">print(x)</span></code>
+      </section>
+      <section class="main-section" id="Reference">
+        <header>Reference</header>
+        <p>Most information from <a href="https://www.w3schools.com/python/python_for_loops.asp">HERE</a>.
+    </main>
+  </body>
+</html>
